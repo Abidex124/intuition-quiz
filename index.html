@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTUITION QUIZ</title>
+    <title>ZAMA FHE QUIZ</title>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <style>
+    <style> 
         * {
             margin: 0;
             padding: 0;
@@ -794,8 +794,8 @@
     <div class="container">
         <!-- Start Screen -->
         <div id="start-screen" class="start-screen">
-            <h1>INTUITION QUIZ</h1>
-            <p>Test your gut feeling about Intuition</p>
+            <h1>ZAMA FHE QUIZ</h1>
+            <p>Test your gut feeling about fully homomorphic encryption</p>
             <div class="name-input">
                 <input type="text" id="player-name" placeholder="ENTER YOUR NAME" maxlength="20">
             </div>
@@ -864,7 +864,7 @@
                 <div class="decoration decoration-1"></div>
                 <div class="decoration decoration-2"></div>
                 <div class="results-card-content">
-                    <h2>INTUITION QUIZ RESULTS</h2>
+                    <h2>ZAMA QUIZ RESULTS</h2>
                     <div class="player-name" id="card-player-name"></div>
                     <div class="difficulty" id="card-difficulty"></div>
                     
@@ -892,7 +892,7 @@
                     
                     <div class="message" id="card-message"></div>
                     <div class="date" id="card-date"></div>
-                    <div class="watermark">Intuition Quiz</div>
+                    <div class="watermark">ZAMA Quiz</div>
                 </div>
             </div>
             
@@ -906,7 +906,7 @@
     <div id="download-container">
         <div id="download-card">
             <div class="card-header">
-                <h2>INTUITION QUIZ RESULTS</h2>
+                <h2>ZAMA QUIZ RESULTS</h2>
             </div>
             
             <div class="player-info">
@@ -943,7 +943,7 @@
             
             <div class="footer">
                 <div class="date" id="download-date"></div>
-                <div class="watermark">Intuition Quiz</div>
+                <div class="watermark">ZAMA Quiz</div>
             </div>
         </div>
     </div>
@@ -3867,21 +3867,22 @@
             });
             
             // Set IQ level and message based on score
-            if (percentage >= 80) {
-                iqLevel.textContent = "HIGH INTUITION IQ";
-                iqLevel.className = "iq-level high";
-                cardMessage.textContent = "Your intuition is exceptionally sharp. You have a natural ability to sense the right answers before you know them. Trust your gut - it's clearly well-developed!";
-            } else if (percentage >= 50) {
-                iqLevel.textContent = "MID INTUITION IQ";
-                iqLevel.className = "iq-level mid";
-                cardMessage.textContent = "Your intuition is developing well. With more practice, you can hone your gut feelings to be more accurate. Pay attention to when your first instinct is right.";
-            } else {
-                iqLevel.textContent = "LOW INTUITION IQ";
-                iqLevel.className = "iq-level low";
-                cardMessage.textContent = "Your intuition needs more training. Pay attention to your first instincts and trust them more often. Practice will help you distinguish between random guesses and true intuition.";
-            }
-            
-            resultsCard.style.display = 'block';
+           if (percentage >= 80) {
+    iqLevel.textContent = "FHE EXPERT";
+    iqLevel.className = "iq-level high";
+    cardMessage.textContent = "Outstanding! You clearly understand Zama and Fully Homomorphic Encryption at a deep level. Your grasp of privacy-preserving computation is exceptional.";
+} else if (percentage >= 50) {
+    iqLevel.textContent = "FHE LEARNER";
+    iqLevel.className = "iq-level mid";
+    cardMessage.textContent = "Great progress! You have a solid understanding of Zama and FHE. Keep exploring concepts like encrypted computation and bootstrapping to strengthen your knowledge.";
+} else {
+    iqLevel.textContent = "FHE BEGINNER";
+    iqLevel.className = "iq-level low";
+    cardMessage.textContent = "You're just starting your journey with Zama and Fully Homomorphic Encryption. Don’t worry — with more practice, you’ll soon grasp how powerful FHE is for onchain privacy.";
+}
+
+resultsCard.style.display = 'block';
+
         }
 
         // Restart game
@@ -3926,18 +3927,18 @@
             const cardMessageElement = document.getElementById('download-card-message');
             
             if (percentage >= 80) {
-                iqLevelElement.textContent = "HIGH INTUITION IQ";
-                iqLevelElement.className = "iq-level high";
-                cardMessageElement.textContent = "Your intuition is exceptionally sharp. You have a natural ability to sense the right answers before you know them. Trust your gut - it's clearly well-developed!";
-            } else if (percentage >= 50) {
-                iqLevelElement.textContent = "MID INTUITION IQ";
-                iqLevelElement.className = "iq-level mid";
-                cardMessageElement.textContent = "Your intuition is developing well. With more practice, you can hone your gut feelings to be more accurate. Pay attention to when your first instinct is right.";
-            } else {
-                iqLevelElement.textContent = "LOW INTUITION IQ";
-                iqLevelElement.className = "iq-level low";
-                cardMessageElement.textContent = "Your intuition needs more training. Pay attention to your first instincts and trust them more often. Practice will help you distinguish between random guesses and true intuition.";
-            }
+    iqLevel.textContent = "FHE EXPERT";
+    iqLevel.className = "iq-level high";
+    cardMessage.textContent = "Outstanding! You clearly understand Zama and Fully Homomorphic Encryption at a deep level. Your grasp of privacy-preserving computation is exceptional.";
+} else if (percentage >= 50) {
+    iqLevel.textContent = "FHE LEARNER";
+    iqLevel.className = "iq-level mid";
+    cardMessage.textContent = "Great progress! You have a solid understanding of Zama and FHE. Keep exploring concepts like encrypted computation and bootstrapping to strengthen your knowledge.";
+} else {
+    iqLevel.textContent = "FHE BEGINNER";
+    iqLevel.className = "iq-level low";
+    cardMessage.textContent = "You're just starting your journey with Zama and Fully Homomorphic Encryption. Don’t worry — with more practice, you’ll soon grasp how powerful FHE is for onchain privacy.";
+}
             
             // Generate the image with high quality settings
             const downloadCard = document.getElementById('download-card');
@@ -3979,7 +3980,7 @@
         // Share to X (Twitter)
         shareBtn.onclick = function() {
             const percentage = Math.round((correctAnswers / questions.length) * 100);
-            const shareText = `I scored ${percentage}% on the Intuition IQ Quiz (${quizSettings.difficulty} level)!\n\n"${cardMessage.textContent}"\n\nTest your intuition knowledge: ${window.location.href}`;
+            const shareText = `I scored ${percentage}% on the I Zama Quiz (${quizSettings.difficulty} level)!\n\n"${cardMessage.textContent}"\n\nTest your fhe knowledge: ${window.location.href}`;
             const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
             window.open(shareUrl, '_blank', 'width=550,height=420');
         };
@@ -3993,4 +3994,5 @@
     </script>
 </body>
 </html>
+
 
